@@ -154,3 +154,5 @@ skyseg.onnx
 raw_data/
 .gradio/certificate.pem
 
+# nsight reports
+tb/reports/

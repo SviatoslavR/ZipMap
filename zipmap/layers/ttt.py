@@ -63,8 +63,9 @@ def zeropower_via_newtonschulz5(G, steps):
     """
     assert len(G.shape) == 3
     a, b, c = (3.4445, -4.7750, 2.0315)
-    # X = G.bfloat16()
-    X = G.to(dtype=torch.bfloat16, device=G.device).contiguous()
+    # Previous version: X = G.bfloat16()
+    # Use float32 to be compatible with 2080ti
+    X = G.to(dtype=torch.float32, device=G.device).contiguous()
     if G.size(1) > G.size(2):
         X = X.transpose(1, 2)
     # Ensure spectral norm is at most 1
