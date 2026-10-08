@@ -39,6 +39,7 @@ model:
       inter_multi: 2
       base_lr: 0.01
       muon_update_steps: 5
+      use_gram_newton_schulz: False  # Gram Newton-Schulz orthogonalization (see CLAUDE.md)
       use_gate_fn: True
     init_ttt_from_pretrained: True
 

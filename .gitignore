@@ -156,3 +156,14 @@ raw_data/
 
 # nsight reports
 tb/reports/
+*.nsys-rep
+*.ncu-rep
+
+# torch.compile / inductor caches
+torchinductor_cache/
+
+# Claude Code: CLAUDE.md is tracked (shared project knowledge); local working
+# notes and machine-specific settings stay untracked.
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/*.local.json
